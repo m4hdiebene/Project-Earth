@@ -42,10 +42,13 @@ export default function Navbar() {
     }
   };
 
+  const isHome = location.pathname === '/';
+  const isHeroOverlay = isHome && !scrolled;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        scrolled || !isHome
           ? 'glass-nav py-3 shadow-md'
           : 'bg-transparent py-5'
       }`}
@@ -56,7 +59,7 @@ export default function Navbar() {
           <Link to="/" className="flex items-center space-x-2 group">
             {!logoError ? (
               <img
-                src={assets.logos.main}
+                src={isHeroOverlay ? assets.logos.main : assets.logos.dark}
                 alt="Logo"
                 className="h-30 w-auto object-contain block max-w-[150px]"
                 onError={() => setLogoError(true)}
@@ -97,7 +100,7 @@ export default function Navbar() {
                       className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all ${
                         activeDropdown === index
                           ? 'text-olive-accent'
-                          : scrolled ? 'text-forest-deep hover:text-forest-mid' : 'text-white hover:text-olive-accent'
+                          : isHeroOverlay ? 'text-white hover:text-olive-accent' : 'text-forest-deep hover:text-forest-mid'
                       }`}
                     >
                       <span>{item.label}</span>
@@ -115,7 +118,7 @@ export default function Navbar() {
                       className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${
                         isActive
                           ? 'text-olive-accent bg-olive-accent/10'
-                          : scrolled ? 'text-forest-deep hover:text-forest-mid hover:bg-forest-deep/5' : 'text-white hover:text-olive-accent'
+                          : isHeroOverlay ? 'text-white hover:text-olive-accent' : 'text-forest-deep hover:text-forest-mid hover:bg-forest-deep/5'
                       }`}
                     >
                       {item.label}
@@ -210,7 +213,7 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-lg focus:outline-none transition-colors ${scrolled ? 'text-forest-deep hover:text-olive-accent' : 'text-white hover:text-olive-accent'}`}
+              className={`p-2 rounded-lg focus:outline-none transition-colors ${isHeroOverlay ? 'text-white hover:text-olive-accent' : 'text-forest-deep hover:text-olive-accent'}`}
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={26} /> : <Menu size={26} />}

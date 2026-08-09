@@ -4,6 +4,7 @@ export const assets = {
   logos: {
     // Logo element on navbar and footer
     main: '/logo-placeholder.png',
+    dark: '/logo-placeholder-dark.png',
     
     // Partner logos displayed on the About page
     partners: [
