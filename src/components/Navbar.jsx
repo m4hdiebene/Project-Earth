@@ -97,7 +97,7 @@ export default function Navbar() {
                       className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all ${
                         activeDropdown === index
                           ? 'text-olive-accent'
-                          : 'text-forest-deep hover:text-forest-mid'
+                          : scrolled ? 'text-forest-deep hover:text-forest-mid' : 'text-white hover:text-olive-accent'
                       }`}
                     >
                       <span>{item.label}</span>
@@ -115,7 +115,7 @@ export default function Navbar() {
                       className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${
                         isActive
                           ? 'text-olive-accent bg-olive-accent/10'
-                          : 'text-forest-deep hover:text-forest-mid hover:bg-forest-deep/5'
+                          : scrolled ? 'text-forest-deep hover:text-forest-mid hover:bg-forest-deep/5' : 'text-white hover:text-olive-accent'
                       }`}
                     >
                       {item.label}
@@ -210,7 +210,7 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-forest-deep hover:text-olive-accent focus:outline-none transition-colors"
+              className={`p-2 rounded-lg focus:outline-none transition-colors ${scrolled ? 'text-forest-deep hover:text-olive-accent' : 'text-white hover:text-olive-accent'}`}
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={26} /> : <Menu size={26} />}
