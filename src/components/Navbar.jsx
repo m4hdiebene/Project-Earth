@@ -11,6 +11,7 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [logoError, setLogoError] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -24,6 +25,18 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Scroll spy: track which section is visible on the Home page
+  useEffect(() => {
+    if (location.pathname !== '/') { setActiveSection(null); return; }
+    const sectionIds = navigationItems.filter(i => i.sectionId).map(i => i.sectionId);
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length > 0) setActiveSection(visible[0].target.id);
+    }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+    sectionIds.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   // Close mobile menu on route changes
   useEffect(() => {
@@ -83,7 +96,7 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center space-x-1">
             {navigationItems.map((item, index) => {
               const hasSubmenu = !!item.submenu;
-              const isActive = location.pathname === item.path;
+              const isActive = item.sectionId ? activeSection === item.sectionId : location.pathname === item.path;
 
               return (
                 <div

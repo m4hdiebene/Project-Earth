@@ -2,9 +2,11 @@ export const navigationItems = [
   {
     label: 'Home',
     path: '/',
+    sectionId: 'hero',
   },
   {
     label: 'About',
+    path: '/about',
     // submenu: [
     //   { label: 'Who We Are', path: '/about#who-we-are' },
     //   { label: 'Mission & Vision', path: '/about#mission-vision' },
@@ -13,6 +15,8 @@ export const navigationItems = [
   },
   {
     label: 'Events-Impact',
+    path: '/#events',
+    sectionId: 'events',
     // submenu: [
     //   { label: 'Flagship Programs', path: '/#events' },
     //   { label: 'Gallery', path: '/#gallery' },
@@ -28,9 +32,12 @@ export const navigationItems = [
   {
     label: 'Awards',
     path: '/#recognition',
+    sectionId: 'recognition',
   },
   {
     label: 'Publications',
+    path: '/#publications',
+    sectionId: 'publications',
     // submenu: [
     //   { label: 'Member Blogs', path: '/#blogs' },
     //   { label: 'Research & Articles (Academic)', path: '/#research' },
@@ -39,6 +46,8 @@ export const navigationItems = [
   },
   {
     label: 'Leadership',
+    path: '/#leadership',
+    sectionId: 'leadership',
     // submenu: [
     //   { label: 'Presidential Board', path: '/#leadership?tab=presidential' },
     //   { label: 'Advisory Board', path: '/#leadership?tab=advisory' },
@@ -49,9 +58,11 @@ export const navigationItems = [
   {
     label: 'What Leaders Say',
     path: '/#testimonials',
+    sectionId: 'testimonials',
   },
   {
     label: 'Get Involved',
+    path: '/get-involved',
     // submenu: [
     //   {
     //     label: 'Recruitment Portal: Join Us',

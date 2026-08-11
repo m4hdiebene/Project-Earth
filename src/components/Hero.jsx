@@ -14,7 +14,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-forest-deep">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-forest-deep">
       {/* Background Video Element */}
       <video
        autoPlay
