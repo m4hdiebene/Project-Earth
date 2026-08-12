@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Unnecessary files / Documents
+*.docx
+*.pdf
+*.zip
+*.rar
+extracted_docx*/
