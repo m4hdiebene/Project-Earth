@@ -35,6 +35,109 @@ export default function Home() {
       {/* Feature Grid */}
       <FeatureGrid />
 
+      {/* Flagship Events & Programs */}
+      <EventsSection />
+
+      {/* Gallery Section */}
+      <section id="gallery" className="py-24 bg-beige-warm border-t border-forest-deep/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span className="text-xs uppercase tracking-widest text-olive-accent font-semibold block">
+              Exhibitions
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-deep font-serif">
+              Visual Archives & Bio-Activity
+            </h2>
+            <p className="text-sm text-earth-brown font-sans max-w-md mx-auto font-light leading-relaxed">
+              A gallery showcase detailing colony architecture, field excursions, and microbiological soil mappings.
+            </p>
+          </div>
+
+          {/* Responsive gallery grid with empty placeholders as requested */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="aspect-[4/3] rounded-3xl bg-forest-mid flex flex-col items-center justify-center border border-olive-accent/15 hover:border-olive-accent/40 shadow-sm relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-forest-deep to-transparent opacity-80" />
+              <div className="relative z-10 p-4 text-center">
+                <h4 className="text-white text-sm font-semibold">Tunnelling Cross-Section</h4>
+                <span className="text-[10px] text-earth-brown/80 font-mono block mt-2 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+                  [ gallery-1.jpg ]
+                </span>
+              </div>
+            </div>
+            <div className="aspect-[4/3] rounded-3xl bg-forest-mid flex flex-col items-center justify-center border border-olive-accent/15 hover:border-olive-accent/40 shadow-sm relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-forest-deep to-transparent opacity-80" />
+              <div className="relative z-10 p-4 text-center">
+                <h4 className="text-white text-sm font-semibold">Bioturbation Workshop Oregon</h4>
+                <span className="text-[10px] text-earth-brown/80 font-mono block mt-2 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+                  [ gallery-2.jpg ]
+                </span>
+              </div>
+            </div>
+            <div className="aspect-[4/3] rounded-3xl bg-forest-mid flex flex-col items-center justify-center border border-olive-accent/15 hover:border-olive-accent/40 shadow-sm relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-forest-deep to-transparent opacity-80" />
+              <div className="relative z-10 p-4 text-center">
+                <h4 className="text-white text-sm font-semibold">Micro-Ecological Camp 2026</h4>
+                <span className="text-[10px] text-earth-brown/80 font-mono block mt-2 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+                  [ gallery-3.jpg ]
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recognition & Awards Section */}
+      <section id="recognition" className="py-24 bg-soft-white border-t border-forest-deep/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span className="text-xs uppercase tracking-widest text-olive-accent font-semibold block">
+              Achievements
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-deep font-serif">
+              Recognition & Global Awards
+            </h2>
+            <p className="text-sm text-earth-brown font-sans max-w-md mx-auto font-light leading-relaxed">
+              We are proud to have our soil conservation advocacy recognized by international biology and conservation groups.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-3xl p-8 border border-forest-deep/5 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-full bg-olive-accent/10 flex items-center justify-center text-olive-accent">
+                <Trophy size={28} />
+              </div>
+              <h3 className="text-lg font-bold font-serif text-forest-deep">Bio-diversity Shield 2025</h3>
+              <p className="text-xs sm:text-sm text-earth-brown font-light leading-relaxed font-sans">
+                Awarded by the National Soil Ecology Council for our impactful community bioturbation mapping program.
+              </p>
+              <span className="text-[10px] text-earth-brown/40 font-mono block pt-2">[ award-1.jpg ]</span>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 border border-forest-deep/5 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-full bg-olive-accent/10 flex items-center justify-center text-olive-accent">
+                <ShieldCheck size={28} />
+              </div>
+              <h3 className="text-lg font-bold font-serif text-forest-deep">Green Canopy Accord</h3>
+              <p className="text-xs sm:text-sm text-earth-brown font-light leading-relaxed font-sans">
+                Official recognition by the World Reforestation Registry for micro-ecosystem protection structures.
+              </p>
+              <span className="text-[10px] text-earth-brown/40 font-mono block pt-2">[ award-2.jpg ]</span>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 border border-forest-deep/5 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-full bg-olive-accent/10 flex items-center justify-center text-olive-accent">
+                <Heart size={28} />
+              </div>
+              <h3 className="text-lg font-bold font-serif text-forest-deep">Eco Impact Award</h3>
+              <p className="text-xs sm:text-sm text-earth-brown font-light leading-relaxed font-sans">
+                Presented by the Youth for Soil Initiative for recruiting over 5,000 active soil stewards in 2025.
+              </p>
+              <span className="text-[10px] text-earth-brown/40 font-mono block pt-2">[ award-3.jpg ]</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Publications / Creations / Updates Section */}
       <section id="publications" className="py-24 bg-soft-white border-t border-forest-deep/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,109 +239,6 @@ export default function Home() {
                   Explore Creative works →
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Flagship Events & Programs */}
-      <EventsSection />
-
-      {/* Gallery Section */}
-      <section id="gallery" className="py-24 bg-beige-warm border-t border-forest-deep/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs uppercase tracking-widest text-olive-accent font-semibold block">
-              Exhibitions
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-deep font-serif">
-              Visual Archives & Bio-Activity
-            </h2>
-            <p className="text-sm text-earth-brown font-sans max-w-md mx-auto font-light leading-relaxed">
-              A gallery showcase detailing colony architecture, field excursions, and microbiological soil mappings.
-            </p>
-          </div>
-
-          {/* Responsive gallery grid with empty placeholders as requested */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="aspect-[4/3] rounded-3xl bg-forest-mid flex flex-col items-center justify-center border border-olive-accent/15 hover:border-olive-accent/40 shadow-sm relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-forest-deep to-transparent opacity-80" />
-              <div className="relative z-10 p-4 text-center">
-                <h4 className="text-white text-sm font-semibold">Tunnelling Cross-Section</h4>
-                <span className="text-[10px] text-earth-brown/80 font-mono block mt-2 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-                  [ gallery-1.jpg ]
-                </span>
-              </div>
-            </div>
-            <div className="aspect-[4/3] rounded-3xl bg-forest-mid flex flex-col items-center justify-center border border-olive-accent/15 hover:border-olive-accent/40 shadow-sm relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-forest-deep to-transparent opacity-80" />
-              <div className="relative z-10 p-4 text-center">
-                <h4 className="text-white text-sm font-semibold">Bioturbation Workshop Oregon</h4>
-                <span className="text-[10px] text-earth-brown/80 font-mono block mt-2 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-                  [ gallery-2.jpg ]
-                </span>
-              </div>
-            </div>
-            <div className="aspect-[4/3] rounded-3xl bg-forest-mid flex flex-col items-center justify-center border border-olive-accent/15 hover:border-olive-accent/40 shadow-sm relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-forest-deep to-transparent opacity-80" />
-              <div className="relative z-10 p-4 text-center">
-                <h4 className="text-white text-sm font-semibold">Micro-Ecological Camp 2026</h4>
-                <span className="text-[10px] text-earth-brown/80 font-mono block mt-2 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-                  [ gallery-3.jpg ]
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recognition & Awards Section */}
-      <section id="recognition" className="py-24 bg-soft-white border-t border-forest-deep/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs uppercase tracking-widest text-olive-accent font-semibold block">
-              Achievements
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-deep font-serif">
-              Recognition & Global Awards
-            </h2>
-            <p className="text-sm text-earth-brown font-sans max-w-md mx-auto font-light leading-relaxed">
-              We are proud to have our soil conservation advocacy recognized by international biology and conservation groups.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-3xl p-8 border border-forest-deep/5 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-olive-accent/10 flex items-center justify-center text-olive-accent">
-                <Trophy size={28} />
-              </div>
-              <h3 className="text-lg font-bold font-serif text-forest-deep">Bio-diversity Shield 2025</h3>
-              <p className="text-xs sm:text-sm text-earth-brown font-light leading-relaxed font-sans">
-                Awarded by the National Soil Ecology Council for our impactful community bioturbation mapping program.
-              </p>
-              <span className="text-[10px] text-earth-brown/40 font-mono block pt-2">[ award-1.jpg ]</span>
-            </div>
-
-            <div className="bg-white rounded-3xl p-8 border border-forest-deep/5 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-olive-accent/10 flex items-center justify-center text-olive-accent">
-                <ShieldCheck size={28} />
-              </div>
-              <h3 className="text-lg font-bold font-serif text-forest-deep">Green Canopy Accord</h3>
-              <p className="text-xs sm:text-sm text-earth-brown font-light leading-relaxed font-sans">
-                Official recognition by the World Reforestation Registry for micro-ecosystem protection structures.
-              </p>
-              <span className="text-[10px] text-earth-brown/40 font-mono block pt-2">[ award-2.jpg ]</span>
-            </div>
-
-            <div className="bg-white rounded-3xl p-8 border border-forest-deep/5 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-olive-accent/10 flex items-center justify-center text-olive-accent">
-                <Heart size={28} />
-              </div>
-              <h3 className="text-lg font-bold font-serif text-forest-deep">Eco Impact Award</h3>
-              <p className="text-xs sm:text-sm text-earth-brown font-light leading-relaxed font-sans">
-                Presented by the Youth for Soil Initiative for recruiting over 5,000 active soil stewards in 2025.
-              </p>
-              <span className="text-[10px] text-earth-brown/40 font-mono block pt-2">[ award-3.jpg ]</span>
             </div>
           </div>
         </div>
