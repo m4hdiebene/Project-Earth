@@ -7,6 +7,7 @@ import FeatureGrid from '../components/FeatureGrid';
 import EventsSection from '../components/EventsSection';
 import LeadershipSection from '../components/LeadershipSection';
 import TestimonialSlider from '../components/TestimonialSlider';
+import PublicationsSection from '../components/PublicationsSection';
 
 export default function Home() {
   const location = useLocation();
@@ -138,111 +139,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Publications / Creations / Updates Section */}
-      <section id="publications" className="py-24 bg-soft-white border-t border-forest-deep/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs uppercase tracking-widest text-olive-accent font-semibold block">
-              Knowledge & Creations
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-deep font-serif">
-              Publications & Media Journals
-            </h2>
-            <p className="text-sm text-earth-brown font-sans max-w-md mx-auto font-light leading-relaxed">
-              Read up on peer-reviewed soil data, member stories, or general media columns tracking microscopic ecology.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Sub-section: Member Blogs */}
-            <div id="blogs" className="bg-white rounded-3xl p-8 border border-forest-deep/5 shadow-sm space-y-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-olive-accent uppercase tracking-wider bg-olive-accent/10 px-3 py-1 rounded-full">
-                    Member Blogs
-                  </span>
-                  <span className="text-xs text-earth-brown/50">3 Articles Available</span>
-                </div>
-                <h3 className="text-xl font-bold font-serif text-forest-deep">Perspectives from the Colony</h3>
-                <div className="space-y-4 pt-2">
-                  <div className="border-l-2 border-olive-accent/30 pl-4 space-y-1">
-                    <h4 className="text-sm font-semibold text-forest-deep hover:text-olive-accent cursor-pointer transition-colors">Finding Solace in Soil Aeration</h4>
-                    <p className="text-xs text-earth-brown font-light">By Rebecca Stone • 2 days ago</p>
-                  </div>
-                  <div className="border-l-2 border-olive-accent/30 pl-4 space-y-1">
-                    <h4 className="text-sm font-semibold text-forest-deep hover:text-olive-accent cursor-pointer transition-colors">Formicary Sub-climates & Rain Patterns</h4>
-                    <p className="text-xs text-earth-brown font-light">By Daniel Miller • 1 week ago</p>
-                  </div>
-                </div>
-              </div>
-              <div className="border-t border-forest-deep/5 pt-4">
-                <span className="text-[10px] text-earth-brown/40 font-mono block mb-2">[ blogs-placeholder.jpg ]</span>
-                <button className="text-xs text-forest-deep hover:text-olive-accent font-bold uppercase tracking-wider">
-                  Read All Blogs →
-                </button>
-              </div>
-            </div>
-
-            {/* Sub-section: Research & Articles */}
-            <div id="research" className="bg-white rounded-3xl p-8 border border-forest-deep/5 shadow-sm space-y-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-olive-accent uppercase tracking-wider bg-olive-accent/10 px-3 py-1 rounded-full">
-                    Research & Papers
-                  </span>
-                  <span className="text-xs text-earth-brown/50">Academic Focus</span>
-                </div>
-                <h3 className="text-xl font-bold font-serif text-forest-deep">Entomology & Soil Bioturbation</h3>
-                <div className="space-y-4 pt-2">
-                  <div className="border-l-2 border-olive-accent/30 pl-4 space-y-1">
-                    <h4 className="text-sm font-semibold text-forest-deep hover:text-olive-accent cursor-pointer transition-colors">Micro-channeling: Root Absorption Impacts</h4>
-                    <p className="text-xs text-earth-brown font-light">Published in Soil Biology Journal 2026</p>
-                  </div>
-                  <div className="border-l-2 border-olive-accent/30 pl-4 space-y-1">
-                    <h4 className="text-sm font-semibold text-forest-deep hover:text-olive-accent cursor-pointer transition-colors">Ant Nest Density in Post-Wildfire Soils</h4>
-                    <p className="text-xs text-earth-brown font-light">Ecology Press Review • March 2026</p>
-                  </div>
-                </div>
-              </div>
-              <div className="border-t border-forest-deep/5 pt-4">
-                <span className="text-[10px] text-earth-brown/40 font-mono block mb-2">[ research-placeholder.jpg ]</span>
-                <button className="text-xs text-forest-deep hover:text-olive-accent font-bold uppercase tracking-wider">
-                  Browse Publications →
-                </button>
-              </div>
-            </div>
-
-            {/* Sub-section: Creative Corner */}
-            <div id="creative" className="bg-white rounded-3xl p-8 border border-forest-deep/5 shadow-sm space-y-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-olive-accent uppercase tracking-wider bg-olive-accent/10 px-3 py-1 rounded-full">
-                    Creative Corner
-                  </span>
-                  <span className="text-xs text-earth-brown/50">Arts & Design</span>
-                </div>
-                <h3 className="text-xl font-bold font-serif text-forest-deep">Forest Floor Art Collections</h3>
-                <div className="space-y-4 pt-2">
-                  <div className="border-l-2 border-olive-accent/30 pl-4 space-y-1">
-                    <h4 className="text-sm font-semibold text-forest-deep hover:text-olive-accent cursor-pointer transition-colors">Microscopic Lenses: Photoreactive Prints</h4>
-                    <p className="text-xs text-earth-brown font-light">Exhibition Series by Arthur Clay</p>
-                  </div>
-                  <div className="border-l-2 border-olive-accent/30 pl-4 space-y-1">
-                    <h4 className="text-sm font-semibold text-forest-deep hover:text-olive-accent cursor-pointer transition-colors">Echoes of the Colony: Forest Audio Logs</h4>
-                    <p className="text-xs text-earth-brown font-light">Soundscape Project • 2026 Release</p>
-                  </div>
-                </div>
-              </div>
-              <div className="border-t border-forest-deep/5 pt-4">
-                <span className="text-[10px] text-earth-brown/40 font-mono block mb-2">[ creative-placeholder.jpg ]</span>
-                <button className="text-xs text-forest-deep hover:text-olive-accent font-bold uppercase tracking-wider">
-                  Explore Creative works →
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Publications Section */}
+      <PublicationsSection />
 
       {/* Leadership Board */}
       <LeadershipSection />

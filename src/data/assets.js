@@ -78,6 +78,19 @@ export const assets = {
       '/event-8.jpg',
     ],
     
+    // Publication card images
+    publications: [
+      '/pub_1.png',
+      '/pub_2.png',
+      '/pub_3.png',
+      '/pub_4.png',
+      '/pub_5.png',
+      '/pub_6.png',
+      '/pub_7.png',
+      '/pub_8.png',
+      '/pub_9.png',
+    ],
+    
     // Gallery showcase images
     gallery: [
       '/gallery-1.jpg',
