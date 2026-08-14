@@ -5,7 +5,7 @@ export const assets = {
     // Logo element on navbar and footer
     main: '/logo-placeholder.png',
     dark: '/logo-placeholder-dark.png',
-    
+
     // Partner logos displayed on the About page
     partners: [
       '/partner-logo-1.png',
@@ -13,7 +13,7 @@ export const assets = {
       '/partner-logo-3.png',
       '/partner-logo-4.png',
     ],
-    
+
     // Sponsor logos for the marquee section
     sponsors: [
       '/sponsor-logo-1.jpg',
@@ -43,19 +43,19 @@ export const assets = {
       '/sponsor-logo-25.jpg',
     ]
   },
-  
+
   videos: {
     // Hero background video
     heroBg: '/hero-background.mp4',
   },
-  
+
   images: {
     // Hero exhibition showcase
     heroExhibition: '/hero-image-placeholder.jpg',
-    
+
     // About Page: "Who We Are" image
     aboutWhoWeAre: '/about-who-we-are.jpg',
-    
+
     // Core directory portal card images (Feature Grid)
     features: {
       news: '/news-placeholder.jpg',
@@ -65,7 +65,7 @@ export const assets = {
       gallery: '/gallery-placeholder.jpg',
       join: '/join-placeholder.jpg',
     },
-    
+
     // Events cards images
     events: [
       '/event-1.jpg',
@@ -77,7 +77,7 @@ export const assets = {
       '/event-7.jpg',
       '/event-8.jpg',
     ],
-    
+
     // Publication card images
     publications: [
       '/pub_1.png',
@@ -90,14 +90,31 @@ export const assets = {
       '/pub_8.png',
       '/pub_9.png',
     ],
+
+    // Achievement images
+    achievements: [
+      '/achieve_1.png',
+      '/achieve_2.png',
+      '/achieve_3.png',
+      '/achieve_4.png',
+      '/achieve_5.png',
+      '/achieve_6.png',
+      '/achieve_7.png',
+      '/achieve_8.png',
+      '/achieve_9.png',
+      '/achieve_10.png',
+    ],
     
+    // Global Award image
+    globalAward: '/global_award_1.png',
+
     // Gallery showcase images
     gallery: [
       '/gallery-1.jpg',
       '/gallery-2.jpg',
       '/gallery-3.jpg',
     ],
-    
+
     // Leadership circular avatar images
     leadership: {
       evelynMoss: '/evelyn-moss.jpg',
@@ -109,7 +126,7 @@ export const assets = {
       liamVance: '/liam-vance.jpg',
       elenaRostova: '/elena-rostova.jpg',
     },
-    
+
     // Quote Author avatars
     testimonials: [
       '/leader-1.jpg',
