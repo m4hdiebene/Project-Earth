@@ -25,7 +25,12 @@ dist-ssr
 
 # Unnecessary files / Documents
 *.docx
+*.doc
 *.pdf
 *.zip
 *.rar
+*.7z
+*.tmp
+*.bak
 extracted_docx*/
+extract_*.py
